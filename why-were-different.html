@@ -11,7 +11,7 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">TradeSchool</a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
       
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
@@ -46,14 +46,22 @@
     <section id="hero" class="section container">
       <h1 class="text-4xl text-5xl-desktop mb-6">Why we're different</h1>
       <p class="text-lg text-ink mb-8">You've seen the shape of the problem and the shape of the numbers. This is the actual reasoning behind how TradeSchool is built, not just what's different, but why each difference exists.</p>
+      <div class="hero-img">
+        <img src="assets/hero-why.svg" alt="Comparison of TradeSchool vs other courses">
+      </div>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
     <div id="sticky-cta-bar" class="sticky-cta-bar">
-      <a href="#book" class="btn-primary">Book a one-on-one session</a>
+      <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a one-on-one session</a>
     </div>
 
     <section class="section container">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4 animate-on-scroll">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
       <h2 class="text-3xl mb-6">The question we want you to ask</h2>
       <p class="text-base text-ink mb-6">Before you learn another indicator, strategy, or setup, ask yourself who is moving this market, why they might be doing it, and what evidence you have for either answer.</p>
       <p class="text-base text-ink mb-6">That question changes everything downstream of it. A chart is not a collection of candles. A candle is not a signal. Volume climbing doesn't automatically mean buying, and rising open interest doesn't automatically mean anyone is bullish. An indicator isn't the market itself, only a mathematical description of a small slice of it.</p>
@@ -210,6 +218,22 @@
     </section>
 
   </main>
+
+  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container flex flex-col items-center">
+      <a href="index.html" class="mb-8" style="display: block;">
+        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      </nav>
+      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/scripts.js"></script>
 </body>

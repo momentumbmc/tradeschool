@@ -22,11 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSection) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          // If hero is visible, hide the sticky CTA. If past hero, show it.
           if (entry.isIntersecting) {
             stickyCta.classList.remove('is-visible');
           } else {
-            // Check if we are below the hero
             if (entry.boundingClientRect.top < 0) {
               stickyCta.classList.add('is-visible');
             } else {
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       observer.observe(heroSection);
     } else {
-      // Fallback if no hero element is found
       window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
           stickyCta.classList.add('is-visible');
@@ -61,4 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
       wrapper.addEventListener('scroll', handleScroll, { once: true });
     }
   });
+
+  // Premium Entrance Animations — text only (Stripe/Linear inspired)
+  const animatedElements = document.querySelectorAll('h1, h2, h3, p, .table-container, .level-row, .grid > div');
+  
+  if (animatedElements.length > 0) {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (!prefersReducedMotion) {
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+
+      animatedElements.forEach((el) => {
+        el.classList.add('animate-on-scroll');
+        scrollObserver.observe(el);
+      });
+    }
+  }
 });

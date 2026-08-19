@@ -12,7 +12,7 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">TradeSchool</a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
       
       <nav class="desktop-nav">
         <a href="index.html" class="active">Home</a>
@@ -46,25 +46,28 @@
     <!-- Hero Section -->
     <section id="hero" class="section container" style="position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;">
-        <img src="assets/auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+        <img src="assets/bg-auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
       </div>
       <h1 class="text-4xl text-5xl-desktop mb-6">The way institutions read markets, now taught directly to retail traders</h1>
       <p class="text-lg text-ink-muted mb-8">For decades, that knowledge stayed inside trading desks and proprietary firms. Retail traders got indicators, candlestick patterns, and signals instead. The Art of Making Wealth closes that gap directly, one student at a time, through TradeSchool.</p>
       
-      <a href="#book" class="btn-primary mb-12">Book a one-on-one session</a>
+      <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary mb-12">Book a one-on-one session</a>
       
       <div class="hero-img">
-        <img src="assets/market-data.svg" alt="Real, annotated order-flow chart">
+        <img src="assets/hero-home.svg" alt="Real, annotated order-flow chart">
       </div>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
     <div id="sticky-cta-bar" class="sticky-cta-bar">
-      <a href="#book" class="btn-primary">Book a one-on-one session</a>
+      <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a one-on-one session</a>
     </div>
 
     <!-- If this sounds familiar -->
     <section class="section container">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4 animate-on-scroll">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      </svg>
       <h2 class="text-3xl mb-6">If this sounds familiar</h2>
       <p class="text-lg text-ink mb-6">You've taken a trade that looked exactly like the one that worked last week, and watched it fail anyway. You've added another indicator hoping it would finally remove the guesswork. You've sat through hours of recorded classes and could recite three or four named strategies, and you still couldn't explain, out loud, in real time, why a candle just did what it did.</p>
       <p class="text-base text-ink-muted">None of that means you're bad at this. It means you were taught to follow signals instead of understand a market, and the gap between those two only becomes visible once it has already cost you money.</p>
@@ -76,26 +79,28 @@
       <div class="full-bleed-content">
         <h2 class="text-3xl mb-8">The numbers behind that feeling</h2>
         
-        <p class="text-base mb-12">SEBI's own research: roughly 91% of individual traders in equity derivatives lost money in FY2024-25, around ₹1.056 lakh crore in aggregate net losses for the year. The prior study, covering FY2022 through FY2024, found 93% of individual F&O traders lost money, over ₹1.8 lakh crore in total. A separate study on intraday cash trading found 7 out of 10 individual traders lost money there too.</p>
+        <div style="max-width: 800px;">
+          <p class="text-lg mb-8" style="color: rgba(243, 241, 234, 0.9);">SEBI's own research: roughly 91% of individual traders in equity derivatives lost money in FY2024-25, around ₹1.056 lakh crore in aggregate net losses for the year. The prior study, covering FY2022 through FY2024, found 93% of individual F&O traders lost money, over ₹1.8 lakh crore in total. A separate study on intraday cash trading found 7 out of 10 individual traders lost money there too.</p>
 
-        <p class="text-base mb-12">That's not a scare number meant to sell you something. It's the regulator's own data, and it says what your own experience may already have told you: knowing how to place a trade isn't the same thing as understanding a market.</p>
+          <p class="text-lg mb-16" style="color: rgba(243, 241, 234, 0.9);">That's not a scare number meant to sell you something. It's the regulator's own data, and it says what your own experience may already have told you: knowing how to place a trade isn't the same thing as understanding a market.</p>
+        </div>
 
         <div class="grid mb-12">
-          <div class="lg-col-span-4 flex flex-col mb-8">
+          <div class="lg-col-span-4 flex flex-col mb-8 stat-item">
             <span class="stat-figure">91<span class="percent">%</span></span>
-            <span class="text-sm">lost money in equity derivatives FY24-25</span>
+            <span class="text-base" style="color: rgba(243, 241, 234, 0.8);">lost money in equity derivatives FY24-25</span>
           </div>
-          <div class="lg-col-span-4 flex flex-col mb-8">
+          <div class="lg-col-span-4 flex flex-col mb-8 stat-item">
             <span class="stat-figure">93<span class="percent">%</span></span>
-            <span class="text-sm">lost money in F&O FY22-24</span>
+            <span class="text-base" style="color: rgba(243, 241, 234, 0.8);">lost money in F&O FY22-24</span>
           </div>
-          <div class="lg-col-span-4 flex flex-col mb-8">
-            <span class="stat-figure">7<span class="text-accent"> in </span>10</span>
-            <span class="text-sm">lost money in intraday cash trading</span>
+          <div class="lg-col-span-4 flex flex-col mb-8 stat-item">
+            <span class="stat-figure" style="white-space: nowrap;">7<span class="text-accent" style="font-size: 0.8em; padding: 0 2px;">/</span>10</span>
+            <span class="text-base" style="color: rgba(243, 241, 234, 0.8);">lost money in intraday cash trading</span>
           </div>
         </div>
 
-        <p class="text-xs text-ink-faint">Sources: SEBI studies published July 2024, September 2024, and July 2025.</p>
+        <p class="text-xs mt-8" style="color: rgba(243, 241, 234, 0.4);">Sources: SEBI studies published July 2024, September 2024, and July 2025.</p>
       </div>
     </section>
 
@@ -113,7 +118,7 @@
         
         <div class="lg-col-span-6 lg-col-start-8">
           <div class="bg-surface border border-l rounded-lg p-6">
-            <img src="assets/eleven-levels.svg" alt="Eleven-level progression graphic" class="mb-4">
+            <img src="assets/diagram-eleven-levels.svg" alt="Eleven-level progression graphic" class="mb-4">
           </div>
         </div>
       </div>
@@ -121,6 +126,11 @@
 
     <!-- What we refuse to promise you -->
     <section class="section container">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4 animate-on-scroll">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
       <h2 class="text-3xl mb-6">What we refuse to promise you</h2>
       <p class="text-base text-ink mb-6">No guaranteed returns. No fixed win rate. No secret indicator. No magic setup. No promise that any strategy works in every market condition. Anyone who has genuinely traded knows why: markets don't owe anyone certainty, and a course that implies otherwise is selling a story, not an education.</p>
       <p class="text-base text-ink">What we teach instead is harder to put on a banner and worth far more: the ability to reason clearly when certainty isn't available.</p>
@@ -147,6 +157,22 @@
       </div>
     </section>
   </main>
+
+  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container flex flex-col items-center">
+      <a href="index.html" class="mb-8" style="display: block;">
+        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      </nav>
+      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/scripts.js"></script>
 </body>

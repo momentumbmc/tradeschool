@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+  <rect width="1200" height="540" fill="#F3E9DB"/>
+  <!-- Two column panel divider -->
+  <rect x="0" y="0" width="600" height="540" fill="#F3E9DB"/>
+  <rect x="600" y="0" width="600" height="540" fill="#FAFAF8"/>
+  <line x1="600" y1="0" x2="600" y2="540" stroke="#E4E1D9" stroke-width="1"/>
+  <!-- Left: "Others" column -->
+  <text x="60" y="60" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#8A8D96" letter-spacing="2">OTHERS</text>
+  <rect x="60" y="80" width="460" height="2" fill="#E4E1D9"/>
+  <text x="60" y="120" font-family="'Inter', sans-serif" font-size="14" fill="#4B4F5A">Signals and setups</text>
+  <text x="60" y="155" font-family="'Inter', sans-serif" font-size="14" fill="#4B4F5A">Indicators and overlays</text>
+  <text x="60" y="190" font-family="'Inter', sans-serif" font-size="14" fill="#4B4F5A">Pattern memorisation</text>
+  <text x="60" y="225" font-family="'Inter', sans-serif" font-size="14" fill="#4B4F5A">Alert-driven entries</text>
+  <text x="60" y="260" font-family="'Inter', sans-serif" font-size="14" fill="#4B4F5A">Backtested win rates</text>
+  <!-- Right: "TradeSchool" column -->
+  <text x="660" y="60" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#9C6B2E" letter-spacing="2">TRADESCHOOL</text>
+  <rect x="660" y="80" width="460" height="2" fill="#9C6B2E"/>
+  <text x="660" y="120" font-family="'Inter', sans-serif" font-size="14" fill="#12151C">Market structure first</text>
+  <text x="660" y="155" font-family="'Inter', sans-serif" font-size="14" fill="#12151C">Auction theory &amp; order flow</text>
+  <text x="660" y="190" font-family="'Inter', sans-serif" font-size="14" fill="#12151C">Volume profile reading</text>
+  <text x="660" y="225" font-family="'Inter', sans-serif" font-size="14" fill="#12151C">Reasoned trade planning</text>
+  <text x="660" y="260" font-family="'Inter', sans-serif" font-size="14" fill="#12151C">Institutional logic</text>
+  <text x="600" y="520" font-family="sans-serif" font-size="11" fill="#8A8D96" text-anchor="middle">hero-why.svg — replace with your own image</text>
+</svg>

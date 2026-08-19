@@ -11,7 +11,7 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">TradeSchool</a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
       
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
@@ -45,19 +45,19 @@
     <!-- Hero -->
     <section id="hero" class="section container" style="position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;">
-        <img src="assets/auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+        <img src="assets/bg-auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
       </div>
       <h1 class="text-4xl text-5xl-desktop mb-6">The curriculum</h1>
       <p class="text-lg text-ink mb-8">This is the full Market Intelligence Framework referenced on the home page: eleven levels, built as a progression, nothing skipped and nothing skipped ahead of.</p>
       
       <div class="hero-img" style="max-width: 400px; padding: var(--space-6);">
-        <img src="assets/eleven-levels.svg" alt="Eleven-step vertical progression graphic">
+        <img src="assets/hero-curriculum.svg" alt="Eleven-step vertical progression graphic">
       </div>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
     <div id="sticky-cta-bar" class="sticky-cta-bar">
-      <a href="#book" class="btn-primary">Book a one-on-one session</a>
+      <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a one-on-one session</a>
     </div>
 
     <!-- What you learn -->
@@ -300,7 +300,7 @@
       <h2 class="text-3xl mb-8">Where different traders stand</h2>
       
       <div class="mb-8" style="max-width: 600px; margin: 0 auto;">
-        <img src="assets/outcome-ladder.svg" alt="Outcome Matrix Ladder Graphic">
+        <img src="assets/diagram-outcome-ladder.svg" alt="Outcome Matrix Ladder Graphic">
       </div>
 
       <div class="table-container mb-12">
@@ -423,6 +423,22 @@
       </div>
     </section>
   </main>
+
+  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container flex flex-col items-center">
+      <a href="index.html" class="mb-8" style="display: block;">
+        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      </nav>
+      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/scripts.js"></script>
 </body>
