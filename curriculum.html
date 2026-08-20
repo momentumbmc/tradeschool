@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Curriculum | TradeSchool</title>
+  <meta name="description" content="The Market Intelligence Framework: an eleven-level curriculum from how a market physically works to independent professional research.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239C6B2E'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FAFAF8' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -13,16 +17,17 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.svg" alt="TradeSchool" class="logo-header-img"></a>
       
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="why-were-different.html">Why we're different</a>
         <a href="curriculum.html" class="active">Curriculum</a>
         <a href="who-its-for.html">Who this is for</a>
+        <a href="market-education.html">Market Education</a>
       </nav>
 
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -31,7 +36,7 @@
   </header>
 
   <!-- Mobile Nav Overlay -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+  <nav id="mobile-nav-overlay" class="mobile-nav-overlay" aria-label="Mobile menu">
     <button id="mobile-close-btn" class="close-btn" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 6L6 18M6 6L18 18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,26 +46,35 @@
     <a href="why-were-different.html">Why we're different</a>
     <a href="curriculum.html" class="active">Curriculum</a>
     <a href="who-its-for.html">Who this is for</a>
-  </div>
+    <a href="market-education.html">Market Education</a>
+  </nav>
 
   <main>
     <!-- Hero -->
-    <section id="hero" class="section section-hero container" style="position: relative; overflow: hidden;">
-      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;">
-        <img src="assets/bg-auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+    <section id="hero" class="section section-hero container hero">
+      <div class="hero-bg-overlay">
+        <img src="assets/bg-auction-curve.svg" alt="" class="hero-bg-img">
       </div>
       <h1 class="text-4xl text-5xl-desktop mb-6">The curriculum</h1>
       <p class="text-lg text-ink mb-8">This is the full Market Intelligence Framework referenced on the home page: eleven levels, built as a progression, nothing skipped and nothing skipped ahead of.</p>
       
-      <div class="hero-img">
-        <img src="assets/hero-curriculum.svg" alt="Eleven-step vertical progression graphic">
-      </div>
+      <figure class="hero-img">
+        <img src="assets/hero-curriculum.svg" alt="Eleven-step vertical progression graphic" fetchpriority="high">
+      </figure>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
     <div id="sticky-cta-bar" class="sticky-cta-bar">
       <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a one-on-one session</a>
     </div>
+
+    <!-- Why this isn't an intraday course, a swing course, or an options course -->
+    <section class="section container">
+      <h2 class="text-3xl mb-6">Why this isn't an intraday course, a swing course, or an options course</h2>
+      <p class="text-base text-ink mb-6">Most trading education in India is sold by segment: an intraday course, a swing trading course, an options course, a scalping course, sometimes a separate forex or crypto course on top of that. That segmentation makes sense if what's being sold is a set of trade setups tuned to one instrument's typical behavior. It stops making sense once what's being taught is how an auction works, because an auction doesn't change its underlying logic depending on what's being auctioned.</p>
+      <p class="text-base text-ink mb-6">Participants, liquidity, value, inventory, and order flow show up whether you're reading an intraday five-minute chart, a multi-week swing position, an options chain, a currency pair, or a crypto market running twenty-four hours a day. The eleven levels below are built around that logic, not around any single instrument, which is why the same framework carries across all of them.</p>
+      <p class="text-base text-ink mb-8">That doesn't mean every instrument behaves identically. Options, currencies, and crypto each carry mechanics of their own beyond what any single framework can capture in the abstract. What transfers is the underlying discipline, not a promise that one lesson covers every product's fine print.</p>
+    </section>
 
     <!-- What you learn -->
     <section class="section container">
@@ -139,7 +153,10 @@
         <span class="scroll-affordance">scroll for more &rarr;</span>
       </div>
 
-      <!-- Level Details -->
+      <!-- Level Details
+       NOTE (not applied): the 11 levels below are an ordered progression and would
+       be semantically ideal as <ol><li>. Kept as divs to avoid any list-style
+       leakage / CSS risk to the existing .level-row layout. -->
       <div class="level-details mt-12">
         <div class="level-row">
           <div><span class="level-marker">Level 01</span></div>
@@ -244,6 +261,9 @@
       <h2 class="text-3xl mb-6">How every lesson gets built</h2>
       <p class="text-base text-ink mb-6">Every major concept in the program is taught through the same nine-part structure, so students always know what kind of thinking is being asked of them at each stage.</p>
       
+      <!-- NOTE (not applied): this label/value table maps naturally to <dl>/<dt>/<dd>;
+     kept as a table because the mobile stack layout depends on the
+     .stack-table-mobile .tr/.td-label/.td-value CSS rules. -->
       <div class="table-container mb-12">
         <table class="stack-table-mobile">
           <tbody class="tbody">
@@ -301,9 +321,9 @@
     <section class="section container">
       <h2 class="text-3xl mb-8">Where different traders stand</h2>
       
-      <div class="mb-8" style="max-width: 600px; margin: 0 auto;">
+      <figure class="diagram-frame mb-8">
         <img src="assets/diagram-outcome-ladder.svg" alt="Outcome Matrix Ladder Graphic" loading="lazy" decoding="async">
-      </div>
+      </figure>
 
       <div class="table-container mb-12">
         <div class="scroll-table-wrapper">
@@ -413,7 +433,7 @@
     </section>
 
     <!-- The test -->
-    <section class="section container bg-accent-wash" style="border-radius: var(--radius-lg); padding: var(--space-8);">
+    <section class="section container bg-accent-wash cta-panel">
       <h2 class="text-3xl mb-6">The test</h2>
       <p class="text-base text-ink mb-6">At some point, imagine your mentor strips every indicator off your screen: no RSI, no MACD, no moving averages, no colored arrows, no flashing "buy now" signal, none of it, and simply asks you to tell them what the market is doing.</p>
       <p class="text-base text-ink mb-8">Can you? If the honest answer is no, the education isn't finished yet. If the answer is yes, and you can explain what you observed, what you're inferring from it, what you genuinely don't know, what would invalidate your read, and how you would manage the risk regardless, you're starting to think like a market professional.</p>
@@ -421,24 +441,25 @@
       <div class="flex items-center gap-4 mt-8">
         <a href="who-its-for.html" class="no-underline font-mono-bold">See who this is for &rarr;</a>
         <span class="text-ink-faint">|</span>
-        <a href="#book" class="no-underline font-mono-bold">Book a one-on-one session</a>
+        <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="no-underline font-mono-bold">Book a one-on-one session</a>
       </div>
     </section>
   </main>
 
-  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+  <footer class="bg-anchor site-footer">
     <div class="container flex flex-col items-center">
-      <a href="index.html" class="mb-8" style="display: block;">
-        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      <a href="index.html" class="footer-logo mb-8">
+        <img src="assets/logo.png" alt="TradeSchool Logo" class="footer-logo-img">
       </a>
-      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
-        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
-        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
-        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
-        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
-        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      <nav class="flex items-center justify-center gap-8 mb-12 footer-nav">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono footer-link">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono footer-link">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono footer-link">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono footer-link">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono footer-link">Who this is for</a>
+        <a href="market-education.html" class="text-anchor no-underline text-sm font-mono footer-link">Market Education</a>
       </nav>
-      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+      <p class="text-xs font-mono footer-copyright">&copy; 2026 TradeSchool. All rights reserved.</p>
     </div>
   </footer>
 

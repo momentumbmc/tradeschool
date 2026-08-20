@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Who this is for | TradeSchool</title>
+  <meta name="description" content="TradeSchool programs: The Art of Making Wealth flagship mentorship, plus personal finance, financial wellness, and financial literacy for individuals, teams, and students.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239C6B2E'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FAFAF8' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -13,16 +17,17 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.svg" alt="TradeSchool" class="logo-header-img"></a>
       
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="why-were-different.html">Why we're different</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="who-its-for.html" class="active">Who this is for</a>
+        <a href="market-education.html">Market Education</a>
       </nav>
 
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -31,7 +36,7 @@
   </header>
 
   <!-- Mobile Nav Overlay -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+  <nav id="mobile-nav-overlay" class="mobile-nav-overlay" aria-label="Mobile menu">
     <button id="mobile-close-btn" class="close-btn" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 6L6 18M6 6L18 18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,19 +46,20 @@
     <a href="why-were-different.html">Why we're different</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="who-its-for.html" class="active">Who this is for</a>
-  </div>
+    <a href="market-education.html">Market Education</a>
+  </nav>
 
   <main>
     <!-- Hero -->
-    <section id="hero" class="section section-hero container" style="position: relative; overflow: hidden;">
-      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;">
-        <img src="assets/bg-auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+    <section id="hero" class="section section-hero container hero">
+      <div class="hero-bg-overlay">
+        <img src="assets/bg-auction-curve.svg" alt="" class="hero-bg-img">
       </div>
       <h1 class="text-4xl text-5xl-desktop mb-6">Who it's for, your mentor, and how this compares</h1>
       <p class="text-lg text-ink mb-8">If you've read this far, you likely already know whether this is built for you. Here's the direct comparison, and who's leading the training.</p>
-      <div class="hero-img">
-        <img src="assets/hero-who.svg" alt="Who TradeSchool is designed for">
-      </div>
+      <figure class="hero-img">
+        <img src="assets/hero-who.svg" alt="Who TradeSchool is designed for" fetchpriority="high">
+      </figure>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
@@ -68,17 +74,23 @@
       <p class="text-base text-ink mb-12">It's probably not for people who want guaranteed returns, instant entry and exit calls, a secret strategy, passive income from trading without the work behind it, or an education that promises to eliminate uncertainty rather than teach them to work inside it.</p>
     </section>
 
+    <!-- What experience level is this for -->
+    <section class="section container">
+      <h2 class="text-3xl mb-6">What experience level is this for</h2>
+      <p class="text-base text-ink mb-8">Complete beginners and experienced traders enroll in the same program, because there's no fixed starting point built for one skill level. Level 1 of the curriculum assumes no prior market knowledge, and a trader who already has years of screen time simply starts further along it. The syllabus adjusts to the student. The standard it's building toward stays the same. If none of the language on this site is familiar yet, the <a href="market-education.html">Market Education</a> page is a better place to start than this one.</p>
+    </section>
+
     <!-- TradeSchool versus the usual approach -->
     <section class="section container bg-canvas">
       <h2 class="text-3xl mb-6">TradeSchool versus the usual approach</h2>
       
       <div class="table-container mb-12">
-        <table class="stack-table-mobile" style="border-collapse: separate; border-spacing: 0; width: 100%;">
-          <thead style="display: none;">
+        <table class="stack-table-mobile who-table">
+          <thead class="sr-only">
             <tr>
-              <th>Area</th>
-              <th>Most institutes in India</th>
-              <th>TradeSchool</th>
+              <th scope="col">Area</th>
+              <th scope="col">Most institutes in India</th>
+              <th scope="col">TradeSchool</th>
             </tr>
           </thead>
           <tbody class="tbody">
@@ -132,6 +144,67 @@
       </div>
     </section>
 
+    <!-- Beyond this program -->
+    <section class="section container">
+      <h2 class="text-3xl mb-6">Beyond this program</h2>
+      <p class="text-base text-ink mb-8">The Art of Making Wealth is the flagship, not the only program TradeSchool runs.</p>
+      
+      <div class="grid">
+        <article class="card program-card program-card--featured">
+          <div class="program-card-body">
+            <span class="program-card-eyebrow">Flagship program</span>
+            <h3 class="text-base text-ink mb-2">The Art of Making Wealth</h3>
+            <p class="text-sm text-ink-muted">One-on-one professional mentorship in institutional-level trading. The program this website is built around.</p>
+          </div>
+          <img src="assets/badge-flagship.svg" alt="Flagship program badge" class="program-card-badge" loading="lazy" decoding="async">
+        </article>
+        <article class="card program-card lg-col-span-6">
+          <span class="program-card-index">02</span>
+          <div class="program-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
+              <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
+              <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
+            </svg>
+          </div>
+          <h3 class="text-base text-ink mb-2">Personal Finance</h3>
+          <p class="text-sm text-ink-muted">Practical money management for individuals, outside of trading and markets.</p>
+        </article>
+        <article class="card program-card lg-col-span-6">
+          <span class="program-card-index">03</span>
+          <div class="program-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+            </svg>
+          </div>
+          <h3 class="text-base text-ink mb-2">Financial Freedom Masterclass</h3>
+          <p class="text-sm text-ink-muted">A foundational course in building financial independence, open to anyone.</p>
+        </article>
+        <article class="card program-card lg-col-span-6">
+          <span class="program-card-index">04</span>
+          <div class="program-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="text-base text-ink mb-2">Financial Wellness Education for corporate employees</h3>
+          <p class="text-sm text-ink-muted">Workplace financial wellness programs delivered directly to corporate teams.</p>
+        </article>
+        <article class="card program-card lg-col-span-6">
+          <span class="program-card-index">05</span>
+          <div class="program-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <h3 class="text-base text-ink mb-2">Financial Literacy Program for school and college students</h3>
+          <p class="text-sm text-ink-muted">Financial literacy fundamentals for students, building the habits before the stakes get real.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- About your mentor -->
     <section class="section container">
       <h2 class="text-3xl mb-6">About your mentor</h2>
@@ -148,25 +221,26 @@
         <h2 class="text-3xl mb-6 text-anchor">Start the mentorship</h2>
         <p class="text-base text-anchor mb-8">TradeSchool doesn't run on batches or intake deadlines, and it isn't trying to be the biggest name in this industry. Mentorship begins when you're ready to commit to it, and seats stay limited on purpose.</p>
         
-        <a href="#book" class="btn-primary mb-6">Book a one-on-one session</a>
-        <p class="text-base pull-quote text-anchor" style="opacity: 0.8;">Understand the market. Build your own intelligence. Trade with reason.</p>
+        <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="btn-primary mb-6">Book a one-on-one session</a>
+        <blockquote class="text-base pull-quote text-anchor pull-quote-soft">Understand the market. Build your own intelligence. Trade with reason.</blockquote>
       </div>
     </section>
   </main>
 
-  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+  <footer class="bg-anchor site-footer">
     <div class="container flex flex-col items-center">
-      <a href="index.html" class="mb-8" style="display: block;">
-        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      <a href="index.html" class="footer-logo mb-8">
+        <img src="assets/logo.png" alt="TradeSchool Logo" class="footer-logo-img">
       </a>
-      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
-        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
-        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
-        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
-        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
-        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      <nav class="flex items-center justify-center gap-8 mb-12 footer-nav">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono footer-link">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono footer-link">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono footer-link">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono footer-link">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono footer-link">Who this is for</a>
+        <a href="market-education.html" class="text-anchor no-underline text-sm font-mono footer-link">Market Education</a>
       </nav>
-      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+      <p class="text-xs font-mono footer-copyright">&copy; 2026 TradeSchool. All rights reserved.</p>
     </div>
   </footer>
 

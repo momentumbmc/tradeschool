@@ -5,12 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const navOverlay = document.getElementById('mobile-nav-overlay');
 
   if (menuBtn && closeBtn && navOverlay) {
+    const setMenuState = (open) => {
+      navOverlay.classList.toggle('is-open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
     menuBtn.addEventListener('click', () => {
-      navOverlay.classList.add('is-open');
+      setMenuState(true);
     });
 
     closeBtn.addEventListener('click', () => {
-      navOverlay.classList.remove('is-open');
+      setMenuState(false);
     });
   }
 
@@ -60,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Premium Entrance Animations — text only (Stripe/Linear inspired)
-  const animatedElements = document.querySelectorAll('h1, h2, h3, p, .table-container, .level-row, .grid > div');
+  const animatedElements = document.querySelectorAll('h1, h2, h3, p, blockquote, .table-container, .level-row, .grid > div');
   
   if (animatedElements.length > 0) {
     // Check if user prefers reduced motion

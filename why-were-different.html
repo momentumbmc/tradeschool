@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why we're different | TradeSchool</title>
+  <meta name="description" content="Why TradeSchool refuses shortcuts: no indicators, no signals, no certificates â€” a framework for thinking clearly when certainty isn't available.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%239C6B2E'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FAFAF8' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;510;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -13,16 +17,17 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-header.png" alt="TradeSchool" style="height: 36px; width: auto; display: block;" onerror="this.onerror=null;this.src='assets/logo-header.svg'"></a>
+      <a href="index.html" class="logo"><img src="assets/logo-header.svg" alt="TradeSchool" class="logo-header-img"></a>
       
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="why-were-different.html" class="active">Why we're different</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="who-its-for.html">Who this is for</a>
+        <a href="market-education.html">Market Education</a>
       </nav>
 
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -31,7 +36,7 @@
   </header>
 
   <!-- Mobile Nav Overlay -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+  <nav id="mobile-nav-overlay" class="mobile-nav-overlay" aria-label="Mobile menu">
     <button id="mobile-close-btn" class="close-btn" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 6L6 18M6 6L18 18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,19 +46,20 @@
     <a href="why-were-different.html" class="active">Why we're different</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="who-its-for.html">Who this is for</a>
-  </div>
+    <a href="market-education.html">Market Education</a>
+  </nav>
 
   <main>
     <!-- Hero -->
-    <section id="hero" class="section section-hero container" style="position: relative; overflow: hidden;">
-      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;">
-        <img src="assets/bg-auction-curve.svg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+    <section id="hero" class="section section-hero container hero">
+      <div class="hero-bg-overlay">
+        <img src="assets/bg-auction-curve.svg" alt="" class="hero-bg-img">
       </div>
       <h1 class="text-4xl text-5xl-desktop mb-6">Why we're different</h1>
       <p class="text-lg text-ink mb-8">You've seen the shape of the problem and the shape of the numbers. This is the actual reasoning behind how TradeSchool is built, not just what's different, but why each difference exists.</p>
-      <div class="hero-img">
-        <img src="assets/hero-why.svg" alt="Comparison of TradeSchool vs other courses">
-      </div>
+      <figure class="hero-img">
+        <img src="assets/hero-why.svg" alt="Comparison of TradeSchool vs other courses" fetchpriority="high">
+      </figure>
     </section>
 
     <!-- Sticky Mobile CTA Bar -->
@@ -62,7 +68,7 @@
     </div>
 
     <section class="section container">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4 animate-on-scroll">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4 animate-on-scroll" aria-hidden="true">
         <circle cx="12" cy="12" r="10"/>
         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
         <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -79,6 +85,9 @@
       <p class="text-base text-ink mb-6">Most people's introduction to trading follows a familiar arc. A colorful chart convinces them the market moves in patterns. A new indicator convinces them it will tell them when to buy. An entry, a stop loss, and a target convince them trading is a repeatable formula. Profit screenshots from other traders convince them everyone else is already doing this successfully. A backtest convinces them the edge is proven. A named strategy convinces them they now own a system. A handful of winning trades convinces them the result is reproducible.</p>
       <p class="text-base text-ink mb-8">None of that is malicious. It's just incomplete. A professional market participant eventually stops asking what to do and starts asking a different set of questions.</p>
 
+      <!-- NOTE (not applied): these label/value tables map naturally to <dl>/<dt>/<dd>;
+           kept as tables because the mobile stack layout depends on the
+           .stack-table-mobile .tr/.td-label/.td-value CSS rules. -->
       <div class="table-container">
         <table class="stack-table-mobile">
           <tbody class="tbody">
@@ -187,10 +196,10 @@
     <!-- Same signal, two traders -->
     <section class="section container">
       <h2 class="text-3xl mb-6">Same signal, two traders</h2>
-      <div class="border-l mb-6">
+      <blockquote class="border-l mb-6">
         <p class="text-base text-ink mb-4">Imagine two traders receive the exact same signal. The first sees an indicator flash "buy" and takes it at face value. The second sees the same flash but reads it differently: price has returned to an area the market previously accepted, the broader auction looks balanced, the current move is showing responsive rather than initiative behavior, and order flow is being absorbed rather than driving through. Their working hypothesis is that the auction may rotate back toward value, unless acceptance develops beyond this area first.</p>
         <p class="text-base text-ink">Both traders might press buy. Only one of them understands why the trade exists, and that difference becomes the entire ballgame the moment the market stops behaving like the textbook example.</p>
-      </div>
+      </blockquote>
     </section>
 
     <!-- Why one mentor, not a batch -->
@@ -211,32 +220,33 @@
     </section>
 
     <!-- Our promise to you -->
-    <section class="section container bg-accent-wash" style="border-radius: var(--radius-lg); padding: var(--space-8);">
+    <section class="section container bg-accent-wash cta-panel">
       <h2 class="text-3xl mb-6">Our promise to you</h2>
-      <p class="text-base text-ink mb-6 pull-quote">We won't promise you certainty. What we will give you is a framework for thinking clearly when certainty isn't available. We won't promise you profits either, but we will teach you to understand risk, market behavior, and decision quality well enough to make your own calls.</p>
+      <blockquote class="text-base text-ink mb-6 pull-quote">We won't promise you certainty. What we will give you is a framework for thinking clearly when certainty isn't available. We won't promise you profits either, but we will teach you to understand risk, market behavior, and decision quality well enough to make your own calls.</blockquote>
       <p class="text-base text-ink mb-8">There's no magic setup coming from us, only real teaching in how setups emerge from market conditions in the first place. We're not interested in making you permanently dependent on our signals; our interest is in making you capable of analyzing the market yourself. And we won't teach you to worship any tool, only to understand precisely what it measures and where its limits sit.</p>
       <div class="flex items-center gap-4">
         <a href="curriculum.html" class="no-underline font-mono-bold">See the full curriculum &rarr;</a>
         <span class="text-ink-faint">|</span>
-        <a href="#book" class="no-underline font-mono-bold">Book a one-on-one session</a>
+        <a href="https://wa.me/919481369078" target="_blank" rel="noopener noreferrer" class="no-underline font-mono-bold">Book a one-on-one session</a>
       </div>
     </section>
 
   </main>
 
-  <footer class="bg-anchor" style="padding: var(--space-16) 0 var(--space-8); border-top: 1px solid rgba(255,255,255,0.05);">
+  <footer class="bg-anchor site-footer">
     <div class="container flex flex-col items-center">
-      <a href="index.html" class="mb-8" style="display: block;">
-        <img src="assets/logo.png" alt="TradeSchool Logo" style="height: 40px; width: auto; object-fit: contain;">
+      <a href="index.html" class="footer-logo mb-8">
+        <img src="assets/logo.png" alt="TradeSchool Logo" class="footer-logo-img">
       </a>
-      <nav class="flex items-center justify-center gap-8 mb-12" style="flex-wrap: wrap;">
-        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">News</a>
-        <a href="index.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Home</a>
-        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Why we're different</a>
-        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Curriculum</a>
-        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono" style="opacity: 0.7; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Who this is for</a>
+      <nav class="flex items-center justify-center gap-8 mb-12 footer-nav">
+        <a href="https://www.ft.com/news-feed" target="_blank" rel="noopener noreferrer" class="text-anchor no-underline text-sm font-mono footer-link">News</a>
+        <a href="index.html" class="text-anchor no-underline text-sm font-mono footer-link">Home</a>
+        <a href="why-were-different.html" class="text-anchor no-underline text-sm font-mono footer-link">Why we're different</a>
+        <a href="curriculum.html" class="text-anchor no-underline text-sm font-mono footer-link">Curriculum</a>
+        <a href="who-its-for.html" class="text-anchor no-underline text-sm font-mono footer-link">Who this is for</a>
+        <a href="market-education.html" class="text-anchor no-underline text-sm font-mono footer-link">Market Education</a>
       </nav>
-      <p class="text-xs font-mono" style="color: rgba(243, 241, 234, 0.4);">&copy; 2026 TradeSchool. All rights reserved.</p>
+      <p class="text-xs font-mono footer-copyright">&copy; 2026 TradeSchool. All rights reserved.</p>
     </div>
   </footer>
 
