@@ -65,27 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Premium Entrance Animations — text only (Stripe/Linear inspired)
-  const animatedElements = document.querySelectorAll('h1, h2, h3, p, blockquote, .table-container, .level-row, .grid > div');
-  
-  if (animatedElements.length > 0) {
-    // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (!prefersReducedMotion) {
-      const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            scrollObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
-
-      animatedElements.forEach((el) => {
-        el.classList.add('animate-on-scroll');
-        scrollObserver.observe(el);
-      });
-    }
-  }
 });

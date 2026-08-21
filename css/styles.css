@@ -31,8 +31,10 @@
   --space-16: 64px;
   --space-24: 96px;
   --space-32: 128px;
-  --section-pad-block: 40px;
-  --section-pad-block-lg: 80px;
+  --section-pad-block: 64px;
+  --section-pad-block-lg: 128px;
+  --section-pad-block-md: 96px;
+  --section-pad-block-sm: 80px;
 
   /* Radii & Elevations - Linear precision */
   --radius-sm: 2px;
@@ -88,17 +90,7 @@ body {
   }
 }
 
-/* Premium Animations (Stripe/Linear Inspired) */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 800ms var(--ease), transform 800ms var(--ease);
-}
-
-.animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* Motion: restraint as expertise — no scroll-triggered animation. Hover/focus only at 150ms. */
 
 /* Typography Scales */
 .text-xs {
@@ -124,7 +116,7 @@ body {
 .text-2xl {
   font-size: 1.75rem;
   line-height: 1.3;
-  font-weight: 510;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 
@@ -158,12 +150,13 @@ h1,
 h2 {
   font-family: var(--font-display);
   font-weight: 400;
+  text-wrap: balance;
 }
 
 h3,
 h4 {
   font-family: var(--font-body);
-  font-weight: 510;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 
@@ -181,6 +174,25 @@ h2 em,
 .font-mono-bold {
   font-family: var(--font-mono);
   font-weight: 500;
+}
+
+/* Eyebrow + rule — corporate hierarchy per spec §10 (optional, no colour change) */
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-deep);
+  margin-bottom: var(--space-3);
+}
+
+.section-rule {
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin-bottom: var(--space-6);
 }
 
 .text-ink {
@@ -207,13 +219,13 @@ h2 em,
   color: var(--color-anchor-text);
 }
 
-/* Links */
+/* Links — restraint: hover/focus only, 150ms ease-out per spec §8 */
 a {
   color: var(--color-accent-deep);
   text-decoration: underline;
   text-decoration-color: var(--color-border);
   text-underline-offset: 4px;
-  transition: all 200ms var(--ease);
+  transition: color 150ms ease-out, text-decoration-color 150ms ease-out;
 }
 
 a:hover {
@@ -279,6 +291,28 @@ select:focus-visible {
     padding-top: var(--section-pad-block-lg);
     padding-bottom: var(--section-pad-block-lg);
   }
+
+  .section--md {
+    padding-top: var(--section-pad-block-md);
+    padding-bottom: var(--section-pad-block-md);
+  }
+
+  .section--sm {
+    padding-top: var(--section-pad-block-sm);
+    padding-bottom: var(--section-pad-block-sm);
+  }
+}
+
+@media (max-width: 1023px) {
+  .section--md {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .section--sm {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
 .section-hero {
@@ -341,14 +375,14 @@ select:focus-visible {
 
 /* Global Components */
 
-/* Buttons - Premium Feel */
+/* Buttons — Tier-1 corporate: flat, no lift, 150ms per spec §8 */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-accent);
   color: var(--color-surface);
-  font-weight: 510;
+  font-weight: 500;
   font-family: var(--font-body);
   border-radius: var(--radius-md);
   min-height: 44px;
@@ -357,31 +391,25 @@ select:focus-visible {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  transition: all 250ms var(--ease);
+  transition: background-color 150ms ease-out;
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-deep);
   color: var(--color-surface);
   text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(156, 107, 46, 0.2);
 }
 
 .btn-primary:active {
-  transform: translateY(0);
-  box-shadow: none;
+  background-color: var(--color-accent-deep);
 }
 
-/* Navigation */
+/* Navigation — solid canvas per spec §8, no blur */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(250, 250, 248, 0.9);
-  /* Slight transparency for premium feel */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--color-canvas);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -429,13 +457,13 @@ select:focus-visible {
   left: 0;
   background-color: var(--color-accent-deep);
   transform-origin: bottom right;
-  transition: transform 250ms var(--ease);
+  transition: transform 150ms ease-out;
 }
 
 .desktop-nav a:hover,
 .desktop-nav a.active {
   color: var(--color-ink);
-  font-weight: 510;
+  font-weight: 600;
 }
 
 .desktop-nav a:hover::after,
@@ -454,11 +482,11 @@ select:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 200ms ease;
+  transition: opacity 150ms ease-out;
 }
 
 .mobile-menu-btn:hover {
-  transform: scale(1.05);
+  opacity: 0.7;
 }
 
 .mobile-menu-btn svg {
@@ -503,11 +531,11 @@ select:focus-visible {
   min-width: 44px;
   cursor: pointer;
   margin-bottom: var(--space-8);
-  transition: transform 200ms ease;
+  transition: opacity 150ms ease-out;
 }
 
 .mobile-nav-overlay .close-btn:hover {
-  transform: scale(1.1) rotate(90deg);
+  opacity: 0.7;
 }
 
 .mobile-nav-overlay .close-btn svg {
@@ -522,31 +550,28 @@ select:focus-visible {
   padding: var(--space-4) 0;
   font-weight: 400;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: color 200ms ease, padding-left 200ms ease;
+  transition: color 150ms ease-out;
 }
 
 .mobile-nav-overlay a:hover,
 .mobile-nav-overlay a.active {
   color: var(--color-accent);
-  font-weight: 510;
-  padding-left: var(--space-2);
+  font-weight: 500;
 }
 
-/* Sticky Mobile CTA Bar */
+/* Sticky Mobile CTA Bar — solid surface per spec §8, no blur */
 .sticky-cta-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
   box-shadow: var(--shadow-sticky);
   padding: var(--space-3) 20px calc(var(--space-3) + env(safe-area-inset-bottom));
   z-index: 40;
   transform: translateY(100%);
-  transition: transform 400ms var(--ease);
+  transition: transform 300ms var(--ease);
 }
 
 .sticky-cta-bar.is-visible {
@@ -563,18 +588,13 @@ select:focus-visible {
   }
 }
 
-/* Cards */
+/* Cards — hairline only per spec §4, no shadow, 150ms border */
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(18, 21, 28, 0.04);
+  transition: border-color 150ms ease-out;
 }
 
 /* Stat Callout Block */
@@ -677,18 +697,17 @@ select:focus-visible {
   padding: var(--space-4);
   margin-bottom: var(--space-4);
   display: block;
-  transition: background-color 200ms ease, transform 200ms ease;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
 }
 
 @media (min-width: 1024px) {
   .stack-table-mobile .tr:hover {
     background-color: var(--color-accent-wash);
-    transform: translateX(2px);
   }
 }
 
 .stack-table-mobile .td-label {
-  font-weight: 510;
+  font-weight: 500;
   font-size: var(--text-sm);
   margin-bottom: var(--space-1);
   color: var(--color-ink);
@@ -754,11 +773,11 @@ select:focus-visible {
   text-align: left;
   vertical-align: top;
   background-color: var(--color-surface);
-  transition: background-color 200ms ease;
+  transition: background-color 150ms ease-out;
 }
 
 .scroll-table th {
-  font-weight: 510;
+  font-weight: 500;
 }
 
 .scroll-table tr:last-child td {
@@ -924,14 +943,12 @@ select:focus-visible {
   border-radius: var(--radius-lg);
 }
 
-/* Full bleed sections */
+/* Full bleed sections — no 100vw hack per spec §5: use box-shadow bleed to avoid overflow */
 .full-bleed-section {
-  width: 100vw;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  background-color: var(--color-anchor);
+  box-shadow: 0 0 0 100vmax var(--color-anchor);
+  clip-path: inset(0 -100vmax);
 }
 
 .full-bleed-content {
@@ -966,10 +983,10 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: var(--space-8) auto 0;
-  border: 0px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background-color: var(--color-transparent);
-  aspect-ratio: 1440 / 1024;
+  background-color: var(--color-surface);
+  overflow: hidden;
 }
 
 .hero-img img {
@@ -992,7 +1009,7 @@ img {
   .level-row {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    gap: var(--space-6);
+    gap: var(--space-8);
     margin-bottom: var(--space-12);
   }
 }
@@ -1026,12 +1043,31 @@ img {
   background-color: var(--color-canvas);
   color: var(--color-accent);
   margin-bottom: var(--space-6);
-  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
 }
 
 .program-card-icon-img {
   width: 22px;
   height: 22px;
+  display: block;
+}
+
+/* Section icons — 44×44 hairline, mono, no shadow (spec §9) */
+.section-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.section-icon-img {
+  width: 20px;
+  height: 20px;
   display: block;
 }
 
@@ -1133,7 +1169,7 @@ img {
 
 .footer-link {
   opacity: 0.7;
-  transition: opacity 0.2s ease;
+  transition: opacity 150ms ease-out;
 }
 
 .footer-link:hover {
@@ -1141,7 +1177,7 @@ img {
 }
 
 .footer-copyright {
-  color: rgba(243, 241, 234, 0.4);
+  color: rgba(243, 241, 234, 0.65);
 }
 
 .stat-wrap {
@@ -1157,7 +1193,7 @@ img {
 }
 
 .stat-sources {
-  color: rgba(243, 241, 234, 0.4);
+  color: rgba(243, 241, 234, 0.65);
 }
 
 .diagram-frame {
@@ -1196,8 +1232,7 @@ img {
 }
 
 .who-table {
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -1205,26 +1240,19 @@ img {
   opacity: 0.8;
 }
 
-/* NOTE: The four @media (max-width: 639px) rules below are desktop-first
-   overrides (base = desktop, mobile = override). They are grouped here for
-   maintenance. A future mobile-first migration would invert these into
-   base + @media (min-width: 640px) blocks; kept as-is to preserve the
-   exact current rendering. */
+/* Focus-not-obscured guard for sticky CTA (WCAG 2.4.11) */
+main > section:last-of-type {
+  padding-bottom: calc(var(--section-pad-block-lg) + 24px);
+}
+
 @media (max-width: 639px) {
   footer {
-    padding-bottom: calc(var(--space-16) + var(--space-2) + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(var(--space-16) + 64px + env(safe-area-inset-bottom)) !important;
   }
 
   .hero-img {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
   }
 
   .program-card--featured {
