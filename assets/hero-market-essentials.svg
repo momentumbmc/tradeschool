@@ -9,8 +9,8 @@
     </filter>
   </defs>
   <rect x="0" y="0" width="1440" height="1024" fill="#FAFAF8"/>
-  <text x="720" y="96" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" letter-spacing="1.6" fill="#6E4A1E" text-anchor="middle">HOW A PRICE IS SET</text>
-  <text x="720" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">Not decreed. Agreed — two needs meeting at one price. The auction underneath everything.</text>
+  <text x="720" y="96" font-family="JetBrains Mono, monospace" font-size="13" font-weight="600" letter-spacing="1.6" fill="#6E4A1E" text-anchor="middle">HOW A PRICE IS SET</text>
+  <text x="720" y="120" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">Not decreed. Agreed — two needs meeting at one price. The auction underneath everything.</text>
   <!-- Two circles -->
   <g transform="translate(0,160)">
     <g filter="url(#circle-shadow-hero)">
@@ -31,11 +31,11 @@
     <circle cx="720" cy="300" r="24" fill="#F3E9DB"/>
     <circle cx="720" cy="300" r="9" fill="#9C6B2E"/>
     <!-- Labels -->
-    <text x="470" y="548" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.6" fill="#4B4F5A" text-anchor="middle">BUYER’S PRICE</text>
-    <text x="470" y="570" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">willing to pay</text>
-    <text x="970" y="548" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.6" fill="#4B4F5A" text-anchor="middle">SELLER’S PRICE</text>
-    <text x="970" y="570" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">willing to accept</text>
-    <text x="720" y="576" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">A trade happens when the two agree</text>
+    <text x="470" y="548" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.6" fill="#4B4F5A" text-anchor="middle">BUYER’S PRICE</text>
+    <text x="470" y="570" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">willing to pay</text>
+    <text x="970" y="548" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.6" fill="#4B4F5A" text-anchor="middle">SELLER’S PRICE</text>
+    <text x="970" y="570" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" fill="#4B4F5A" text-anchor="middle">willing to accept</text>
+    <text x="720" y="576" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">A trade happens when the two agree</text>
   </g>
   <!-- Investing vs Trading timeline below circles -->
   <g transform="translate(380,760)">
@@ -46,16 +46,16 @@
       <line x1="0" y1="14" x2="420" y2="14" stroke="#E4E1D9" stroke-width="3" stroke-linecap="round"/>
       <circle cx="0" cy="14" r="5" fill="#E4E1D9"/>
       <circle cx="420" cy="14" r="5" fill="#E4E1D9"/>
-      <text x="210" y="0" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#4B4F5A" text-anchor="middle">INVESTING — YEARS</text>
-      <text x="210" y="36" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4B4F5A" text-anchor="middle">holding ownership, betting on business</text>
+      <text x="210" y="0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#4B4F5A" text-anchor="middle">INVESTING — YEARS</text>
+      <text x="210" y="36" font-family="Instrument Sans, system-ui, sans-serif" font-size="11" fill="#4B4F5A" text-anchor="middle">holding ownership, betting on business</text>
     </g>
     <!-- Trading short dashed -->
     <g transform="translate(24,48)">
       <line x1="0" y1="0" x2="96" y2="0" stroke="#9C6B2E" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6"/>
       <circle cx="0" cy="0" r="5" fill="#9C6B2E"/>
       <circle cx="96" cy="0" r="5" fill="#FFFFFF" stroke="#9C6B2E" stroke-width="2"/>
-      <text x="48" y="-10" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="#6E4A1E">TRADING — DAYS / HOURS</text>
+      <text x="48" y="-10" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#6E4A1E">TRADING — DAYS / HOURS</text>
     </g>
-    <text x="656" y="72" font-family="IBM Plex Mono, monospace" font-size="11" fill="#4B4F5A" text-anchor="end">Different skills. Confusing them is expensive. →</text>
+    <text x="656" y="72" font-family="JetBrains Mono, monospace" font-size="11" fill="#4B4F5A" text-anchor="end">Different skills. Confusing them is expensive. →</text>
   </g>
 </svg>

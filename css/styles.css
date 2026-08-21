@@ -15,10 +15,10 @@
   --color-accent-deep: #6E4A1E;
   --color-accent-wash: #F3E9DB;
 
-  /* Typography */
+  /* Typography — Tier-1 B: Instrument Sans (Google Swiss) + JetBrains Mono (Terminal) */
   --font-display: 'Newsreader', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
 
   /* Spacing */
   --space-1: 4px;
