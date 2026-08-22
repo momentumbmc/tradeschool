@@ -15,10 +15,10 @@
   --color-accent-deep: #6E4A1E;
   --color-accent-wash: #F3E9DB;
 
-  /* Typography — Tier-1 B: Instrument Sans (Google Swiss) + JetBrains Mono (Terminal) */
+  /* Typography — 3-fonts: Newsreader (header) + Source Sans 3 (body + Inter fallback) + JetBrains Mono */
   --font-display: 'Newsreader', serif;
-  --font-body: 'Instrument Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-body: 'Source Sans 3', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing */
   --space-1: 4px;
@@ -104,24 +104,24 @@ body {
 }
 
 .text-base {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.65;
 }
 
 .text-lg {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
 .text-2xl {
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.693rem + 0.284vw, 1.875rem);
   line-height: 1.3;
   font-weight: 500;
   letter-spacing: -0.01em;
 }
 
 .text-3xl {
-  font-size: clamp(1.75rem, 3vw + 1rem, 2.25rem);
+  font-size: clamp(1.75rem, 1.466rem + 1.42vw, 2.375rem);
   line-height: 1.15;
   font-family: var(--font-display);
   font-weight: 400;
@@ -129,22 +129,14 @@ body {
 }
 
 .text-4xl {
-  font-size: clamp(2.125rem, 5vw + 1rem, 3.75rem);
+  font-size: clamp(2.125rem, 1.244rem + 4.40vw, 4.0625rem);
   line-height: 1.08;
   font-family: var(--font-display);
   font-weight: 400;
   letter-spacing: -0.02em;
 }
 
-@media (min-width: 1024px) {
-  .text-5xl-desktop {
-    font-size: 3.75rem;
-    line-height: 1.05;
-    font-family: var(--font-display);
-    font-weight: 400;
-    letter-spacing: -0.03em;
-  }
-}
+
 
 h1,
 h2 {
@@ -158,6 +150,8 @@ h4 {
   font-family: var(--font-body);
   font-weight: 500;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
 h1 em,
@@ -442,6 +436,7 @@ select:focus-visible {
   margin-left: var(--space-6);
   color: var(--color-ink);
   text-decoration: none;
+  font-size: 1.125rem;
   font-weight: 400;
   position: relative;
   padding-bottom: 2px;
@@ -708,14 +703,14 @@ select:focus-visible {
 
 .stack-table-mobile .td-label {
   font-weight: 500;
-  font-size: var(--text-sm);
+  font-size: 1.125rem;
   margin-bottom: var(--space-1);
   color: var(--color-ink);
   display: block;
 }
 
 .stack-table-mobile .td-value {
-  font-size: var(--text-base);
+  font-size: 1.125rem;
   display: block;
 }
 

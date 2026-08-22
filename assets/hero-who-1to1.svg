@@ -18,14 +18,14 @@
       <rect x="0" y="0" width="170" height="118" rx="12" fill="#FAFAF8" stroke="#E4E1D9" stroke-width="1"/>
       <circle cx="85" cy="42" r="22" fill="#9C6B2E"/>
       <text x="85" y="48" font-family="JetBrains Mono, monospace" font-size="13" font-weight="600" fill="#F3F1EA" text-anchor="middle">RR</text>
-      <text x="85" y="82" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">Mentor</text>
+      <text x="85" y="82" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">Mentor</text>
       <text x="85" y="98" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A" text-anchor="middle">Reads auction</text>
     </g>
     <g transform="translate(430,110)">
       <rect x="0" y="0" width="170" height="118" rx="12" fill="#FAFAF8" stroke="#E4E1D9" stroke-width="1"/>
       <circle cx="85" cy="42" r="22" fill="#0B1220"/>
-      <text x="85" y="48" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F3F1EA" text-anchor="middle">YOU</text>
-      <text x="85" y="82" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">Student</text>
+      <text x="85" y="48" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F3F1EA" text-anchor="middle">YOU</text>
+      <text x="85" y="82" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C" text-anchor="middle">Student</text>
       <text x="85" y="98" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A" text-anchor="middle">Level N</text>
     </g>
     <!-- Connection -->
@@ -50,11 +50,11 @@
         </linearGradient>
       </defs>
       <text x="0" y="18" font-family="JetBrains Mono, monospace" font-size="11" fill="#12151C">Start where you are</text>
-      <text x="600" y="18" font-family="Instrument Sans, system-ui, sans-serif" font-size="11" font-style="italic" fill="#4B4F5A" text-anchor="end">— until competence, not calendar</text>
+      <text x="600" y="18" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="11" font-style="italic" fill="#4B4F5A" text-anchor="end">— until competence, not calendar</text>
     </g>
     <!-- Bottom meta -->
     <g transform="translate(24,372)">
-      <text x="0" y="0" font-family="Instrument Sans, system-ui, sans-serif" font-size="11" fill="#4B4F5A">Live sessions only • One dedicated mentor • No fixed end date</text>
+      <text x="0" y="0" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="11" fill="#4B4F5A">Live sessions only • One dedicated mentor • No fixed end date</text>
       <text x="0" y="18" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A">Seats stay limited when a mentor’s time is with existing students</text>
     </g>
   </g>
@@ -62,13 +62,13 @@
   <g transform="translate(360,680)">
     <rect x="0" y="0" width="220" height="56" rx="12" fill="#FFFFFF" stroke="#E4E1D9" stroke-width="1"/>
     <text x="20" y="22" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A">FORMAT</text>
-    <text x="20" y="40" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">Large batches ✕</text>
+    <text x="20" y="40" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">Large batches ✕</text>
     <rect x="240" y="0" width="220" height="56" rx="12" fill="#FFFFFF" stroke="#E4E1D9" stroke-width="1"/>
     <text x="260" y="22" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A">SESSIONS</text>
-    <text x="260" y="40" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">Pre-recorded ✕</text>
+    <text x="260" y="40" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">Pre-recorded ✕</text>
     <rect x="480" y="0" width="240" height="56" rx="12" fill="#F3E9DB" stroke="#9C6B2E" stroke-width="1"/>
     <text x="500" y="22" font-family="JetBrains Mono, monospace" font-size="11" fill="#6E4A1E">TRADESCHOOL</text>
-    <text x="500" y="40" font-family="Instrument Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">1 student, 1 mentor ✓</text>
+    <text x="500" y="40" font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#12151C">1 student, 1 mentor ✓</text>
   </g>
   <text x="720" y="808" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A" text-anchor="middle">Quality over quantity — a harder business to run, a better education to have</text>
 </svg>

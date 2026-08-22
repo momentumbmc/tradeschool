@@ -20,13 +20,13 @@
       <path d="M40 280 C90 256, 140 292, 190 268 C240 244, 300 276, 360 260 C410 246, 450 264, 480 256" stroke-dasharray="3 5" opacity="0.55"/>
       <path d="M40 360 C90 336, 140 372, 190 348 C240 324, 300 356, 360 340 C410 326, 450 344, 480 336" stroke-dasharray="3 5" opacity="0.55"/>
     </g>
-    <g font-family="Instrument Sans, system-ui, sans-serif" font-size="12" fill="#4B4F5A">
+    <g font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="12" fill="#4B4F5A">
       <text x="40" y="148">Signals</text>
       <text x="40" y="228">Indicators</text>
       <text x="40" y="308">Patterns</text>
       <text x="40" y="388">Fixed setups</text>
     </g>
-    <g font-family="Instrument Sans, system-ui, sans-serif" font-size="12" fill="#4B4F5A" opacity="1">
+    <g font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="12" fill="#4B4F5A" opacity="1">
       <text x="40" y="520" font-style="italic">No edge without context</text>
     </g>
     <!-- faint overlay X -->
@@ -64,11 +64,11 @@
       <text x="220" y="250" font-family="JetBrains Mono, monospace" font-size="12" fill="#4B4F5A" text-anchor="middle">time spent at price</text>
     </g>
     <!-- Labels -->
-    <g font-family="Instrument Sans, system-ui, sans-serif" font-size="12" fill="#12151C" font-weight="500">
+    <g font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="12" fill="#12151C" font-weight="500">
       <text x="40" y="520">Auction behaviour</text>
       <text x="40" y="542" font-size="12" fill="#4B4F5A" font-weight="400">Participants • Liquidity • Value</text>
     </g>
-    <g font-family="Instrument Sans, system-ui, sans-serif" font-size="11" fill="#6E4A1E">
+    <g font-family="Source Sans 3, Inter, system-ui, sans-serif" font-size="11" fill="#6E4A1E">
       <text x="40" y="604" font-weight="600">Inventory → Order flow → Execution</text>
     </g>
   </g>
