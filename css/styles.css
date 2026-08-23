@@ -1258,7 +1258,16 @@ img {
 
 @media (max-width: 640px) {
   .hero-video-overlay {
-    background: rgba(250, 250, 248, 0.52);
+    background: rgba(11, 18, 32, 0.55);
+  }
+
+  .hero--video .hero-content h1,
+  .hero--video .hero-content p {
+    color: #FFFFFF;
+  }
+
+  .hero--video .hero-content h1 {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
   }
 }
 
