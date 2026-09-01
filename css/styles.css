@@ -1278,7 +1278,7 @@ img {
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.10);
   opacity: 1;
 }
 
@@ -1296,7 +1296,7 @@ img {
 
 @media (max-width: 640px) {
   .hero-video-overlay {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.10);
     opacity: 1;
   }
 
