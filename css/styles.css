@@ -1258,8 +1258,12 @@ img {
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background-color: var(--color-canvas);
+  background-color: var(--color-anchor);
   pointer-events: none;
+}
+
+.hero--video {
+  background-color: var(--color-anchor);
 }
 
 .hero-bg-video {
@@ -1268,6 +1272,7 @@ img {
   object-fit: cover;
   object-position: center;
   display: block;
+  background-color: var(--color-anchor);
 }
 
 .hero-video-overlay {
@@ -1285,9 +1290,7 @@ img {
   }
 
   .hero-video-wrap {
-    background-image: url("../assets/hero-home.webp");
-    background-size: cover;
-    background-position: center;
+    background-color: var(--color-anchor);
   }
 }
 
