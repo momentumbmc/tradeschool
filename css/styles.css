@@ -17,9 +17,9 @@
   /* One new accent */
   --color-accent-new: #D09F62;
 
-  /* Typography — 3-fonts: Newsreader (header) + Source Sans 3 (body + Inter fallback) + JetBrains Mono */
+  /* Typography — Spline Sans primary, Source Sans 3 fallback + Inter fallback + JetBrains Mono */
   --font-display: 'Newsreader', serif;
-  --font-body: 'Source Sans 3', 'Inter', system-ui, sans-serif;
+  --font-body: 'Spline Sans', 'Source Sans 3', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing */
